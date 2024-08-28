@@ -1,6 +1,7 @@
 @font-face {
   font-family: pixelar ;
   src: url(Pixelar\ Regular\ W01\ Regular.ttf);
+  font-display: swap;
 }
 
 
@@ -8,59 +9,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
-  border: none;
-  outline: none; 
-  font-family: pixelar;
+  font-family: pixelar, sans-serif;
   scroll-behavior: smooth;
+}
 
 html{
-    font-size: 62.5%;
+    font-size: 90.5%;
 }
 
 
+header {
+  display: grid;
+  grid-template-columns: 1fr auto; /* Two columns on larger screens */
+  align-items: center;
+  padding: 0 20px;
 }
-  .banner {
-    background-color: #40A578;
-    padding: 100px;
-    min-height: 100vh;
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    font-size: 50px;
-    color: #FFF;
+
+@media (max-width: 768px) {
+  header {
+      grid-template-columns: 1fr; /* Overrides to single column on smaller screens */
+      justify-content: center;
   }
-
-  header{
-    margin-top: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem 9%;
-    background-color: transparent;
-    filter: drop-shadow(10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
 }
 
-  .logo{
-    font-size: 4rem;
-    color: #b74b4b;
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.5s ease;
-}
-
-.logo:hover{
-    transform: scale(1.1);
-}
 
 nav a{
  font-size: 1.8rem;
- color: white;
+ color: black;
  margin-left: 4rem;
  font-weight: 500;
  transition: 0.3s ease;
@@ -68,11 +43,44 @@ nav a{
 
 }
 
+
+
+  
 nav a:hover,
-nav a.active{
+nav a.active {
   color: blue;
-  border-bottom: 3px solid green;
+  border-bottom: 3px solid green; 
+}
 
 
+section  {
+  padding: 100px;
+  min-height: 100vh;
+}
 
+
+.hero-section {
+  background-color: #7FA1C3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
 }

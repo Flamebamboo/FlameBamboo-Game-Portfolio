@@ -19,20 +19,14 @@ html{
 
 
 header {
+  position: sticky;
+  top: 0;
   display: grid;
   grid-template-columns: 1fr auto; /* Two columns on larger screens */
   align-items: center;
-  padding: 0 20px;
-  height: 50px;
+  padding: 0px;
+  height: 0px;
 }
-
-@media (max-width: 768px) {
-  header {
-      grid-template-columns: 1fr; /* Overrides to single column on smaller screens */
-      justify-content: center;
-  }
-}
-
 
 nav a{
  font-size: 1.8rem;
@@ -65,43 +59,63 @@ section  {
 .hero-section {
   background-color: #7FA1C3;
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
   color: white;
-  position: relative;
   width: 100%;
   min-height: 100vh;
+  padding: 0; /* Remove padding to ensure no extra space */
+  margin: 0; /* Ensure no margin around the section */
+}
+
+.imgSidebar {
+  flex: 1;
+  height: 100%;
+}
+
+.imgSidebar img {
+  width: 85%;
+  height: 100vh; /* Make sure the image covers the full viewport height */
+  object-fit: cover;
+  display: block; /* Remove any gaps around the image */
 }
 
 .hero-contents {
-  max-width: 800px;
-  grid-template-columns: auto;
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-contents h1 {
-  font-size: 5rem;
+  font-size: 7rem;
   margin-bottom: 20px;
-
+  color: azure;
+}
+ 
+.hero-contents h4 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #63499e;
 }
 
 .hero-contents p {
-  font-size: 1.5rem;
-  margin-bottom: 40px;
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  color: #003C43;
 }
 
-.hero-section .imgSidebar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 500px;
-  height: 100%;
+
+
+.hero-contents a.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #C37F9B;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  margin-top: 20px;
+  
 }
-.hero-section .imgSidebar img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+

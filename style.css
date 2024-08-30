@@ -5,37 +5,45 @@
 }
 
 
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: pixelar, sans-serif;
   scroll-behavior: smooth;
 }
 
 html{
-    font-size: 90.5%;
+    font-size: 12pt;
 }
 
 
-header {
-  position: sticky;
-  top: 0;
-  display: grid;
-  grid-template-columns: 1fr auto; /* Two columns on larger screens */
+nav {
+  font-size: 2rem;
+  height: 60px;
+  background-color: #F7F7F8;
+  display: flex;
+  justify-content: flex-end ;
   align-items: center;
-  padding: 0px;
-  height: 0px;
+}
+
+.links-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
 }
 
 nav a{
- font-size: 1.8rem;
- color: black;
- margin-left: 4rem;
- font-weight: 500;
- transition: 0.3s ease;
- border-bottom: 3px solid transparent;
- text-decoration: none;
+  height: 100%;
+  padding: 0 20px;
+  color: #000;
+  font-weight: 500;
+  display: flex; 
+  align-items: center;
+  text-decoration: none;
 
 
 }
@@ -43,10 +51,74 @@ nav a{
 
 
   
-nav a:hover,
+nav a:hover {
+  color:#4E31AA
+}
 nav a.active {
-  color: blue;
-  border-bottom: 3px solid green; 
+  color: #3A1078;
+  margin-right: auto; 
+}
+
+nav svg {
+  fill: #FFF;
+}
+
+
+#sidebar-active {
+  display: none;
+}
+
+.open-sidebar-button, .close-sidebar-button {
+  padding: 0 20px;
+  display: none;
+}
+
+@media (max-width: 600px){
+  .links-container {
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 250px;
+
+    background-color: #F7F7F8;
+    box-shadow: -0.1pc 0 0.1px black;
+    transition: 1s ease-out;
+    
+
+  }
+  nav a {
+    box-sizing: border-box;
+    height:auto;
+    width:100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+    color: #000000;
+
+
+  }
+
+  .open-sidebar-button, .close-sidebar-button{
+    display: block;
+    padding: 20px;
+    z-index: 20;
+  }
+  #sidebar-active:checked ~ .links-container{
+    right: 0;
+    
+  }
+  #sidebar-active:checked ~ #overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+
+  }
 }
 
 
@@ -57,7 +129,7 @@ section  {
 
 
 .hero-section {
-  background-color: #7FA1C3;
+  background-color: #3795BD;
   display: flex;
   align-items: center;
   color: white;

@@ -1,9 +1,9 @@
-var a = prompt('a = ?')
-var b = prompt('b = ?')
+// var a = prompt('a = ?')
+// var b = prompt('b = ?')
 
-a = Number(a);
-b = Number(b);
+// a = Number(a);
+// b = Number(b);
 
-var sum = a = b
+// var sum = a = b
 
-document.write('The sum is: ' + sum)
+// document.write('The sum is: ' + sum)

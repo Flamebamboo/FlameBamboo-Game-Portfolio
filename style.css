@@ -1,10 +1,17 @@
 @font-face {
-  font-family: pixelar ;
+  font-family: pixelar;
   src: url(Pixelar\ Regular\ W01\ Regular.ttf);
   font-display: swap;
 }
 
-
+:root {
+  --primary-purple: #3A1078; /* Dark Purple */
+  --accent-teal: #59C1B2; /* Light Teal */
+  --deep-green: #5B8C24; /* Muted Green */
+  --dark-blue: #16325B; /* Dark Blue */
+  --coral-accent: #229799; /* Soft Coral */
+  --light-text: #F5F5F5; /* Light Text */
+}
 
 * {
   margin: 0;
@@ -13,18 +20,19 @@
   scroll-behavior: smooth;
 }
 
-html{
-    font-size: 12pt;
+html {
+  font-size: 12pt;
 }
-
 
 nav {
   font-size: 2rem;
   height: 60px;
-  background-color: #F7F7F8;
+  background-color: var(--light-text);
   display: flex;
-  justify-content: flex-end ;
+  justify-content: flex-end;
   align-items: center;
+  top: 0;
+  position: sticky;
 }
 
 .links-container {
@@ -33,36 +41,30 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-
 }
 
-nav a{
+nav a {
   height: 100%;
   padding: 0 20px;
   color: #000;
   font-weight: 500;
-  display: flex; 
+  display: flex;
   align-items: center;
   text-decoration: none;
-
-
 }
 
-
-
-  
 nav a:hover {
-  color:#4E31AA
+  color: var(--primary-purple);
 }
+
 nav a.active {
-  color: #3A1078;
-  margin-right: auto; 
+  color: var(--accent-teal);
+  margin-right: auto;
 }
 
 nav svg {
-  fill: #FFF;
+  fill: var(--light-text);
 }
-
 
 #sidebar-active {
   display: none;
@@ -73,70 +75,58 @@ nav svg {
   display: none;
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
   .links-container {
     flex-direction: column;
     align-items: flex-start;
-
     position: fixed;
     top: 0;
     right: -100%;
     z-index: 10;
     width: 250px;
-
-    background-color: #F7F7F8;
+    background-color: var(--primary-bg);
     box-shadow: -0.1pc 0 0.1px black;
     transition: 1s ease-out;
-    
-
   }
+
   nav a {
     box-sizing: border-box;
-    height:auto;
-    width:100%;
+    height: auto;
+    width: 100%;
     padding: 20px 30px;
     justify-content: flex-start;
     color: #000000;
-
-
   }
 
-  .open-sidebar-button, .close-sidebar-button{
+  .open-sidebar-button, .close-sidebar-button {
     display: block;
     padding: 20px;
     z-index: 20;
   }
-  #sidebar-active:checked ~ .links-container{
+
+  #sidebar-active:checked ~ .links-container {
     right: 0;
-    
   }
-  #sidebar-active:checked ~ #overlay{
+
+  #sidebar-active:checked ~ #overlay {
     height: 100%;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9;
-
   }
 }
 
-
-section  {
-  padding: 100px;
-  min-height: 100vh;
-}
-
-
 .hero-section {
-  background-color: #3795BD;
+  background-color: var(--coral-accent);
   display: flex;
   align-items: center;
-  color: white;
+  color: var(--light-text);
   width: 100%;
   min-height: 100vh;
-  padding: 0; /* Remove padding to ensure no extra space */
-  margin: 0; /* Ensure no margin around the section */
+  padding: 0;
+  margin: 0;
 }
 
 .imgSidebar {
@@ -146,9 +136,10 @@ section  {
 
 .imgSidebar img {
   width: 85%;
-  height: 100vh; /* Make sure the image covers the full viewport height */
+  height: 100vh;
   object-fit: cover;
-  display: block; /* Remove any gaps around the image */
+  display: block;
+  background-color: var(--accent-teal);
 }
 
 .hero-contents {
@@ -162,48 +153,144 @@ section  {
 .hero-contents h1 {
   font-size: 7rem;
   margin-bottom: 20px;
-  color: azure;
+  color: var(--light-text);
 }
- 
+
 .hero-contents h4 {
   font-size: 3.5rem;
   margin-bottom: 20px;
-  color: #63499e;
+  color: var(--dark-blue);
 }
 
 .hero-contents p {
   font-size: 1.9rem;
   margin-bottom: 20px;
-  color: #003C43;
+  color: var(--dark-blue);
 }
-
-
 
 .hero-contents a.btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #C37F9B;
-  color: white;
+  background-color: var(--dark-blue);
+  color: var(--light-text);
   text-decoration: none;
-  font-size: 1.5rem;
-  border-radius: 5px;
+  font-size: 2.5rem;
+  border-radius: 10px;
   margin-top: 20px;
-  
+  font-weight: bold;
 }
 
-#section-2{
+.hero-contents .btn:hover {
+  background-color: var(--primary-purple);
+}
+
+section img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* LOST HOWLS Section */
+
+.section-2 {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
+  background-color: var(--dark-blue);
   flex-direction: column;
-  background-color: #003C43
-
+  text-align: center;
 }
 
-.losthowl-banner{
+.losthowl-banner {
+  margin-bottom: 20px;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+.losthowl-banner img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 50px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+}
+
+.centered-text {
+  font-size: 3.5rem;
+  color: var(--light-text);
+  margin-top: 0px;
   
-  max-width: 80%;
-  max-height: 80%;
-  
+}
+
+.bottom-text {
+  font-size: 1.5rem;
+  color: var(--light-text);
+  padding-bottom: 80px;
+  margin: 20px;
+  max-width: 500px;
+  padding-top: 10px;
+}
+
+
+
+
+
+
+/* About Me Section */
+.about-section {
+  background-color: var(--deep-green);
+  padding: 50px 20px;
+  color: var(--light-text);
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-section .content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-me-heading {
+  font-size: 6rem;
+  margin-bottom: 20px;
+}
+
+.about-me-text {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: var(--light-text);
+}
+
+.highlight-text {
+  color: var(--dark-blue);
+  font-weight: bold;
+}
+
+.about-section .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--dark-blue);
+  color: var(--light-text);
+  font-size: 2rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.about-section .btn:hover {
+  background-color: var(--primary-purple);
 }

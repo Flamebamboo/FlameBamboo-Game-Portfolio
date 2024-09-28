@@ -263,7 +263,7 @@ section img {
 }
 
 #skill-section h2 {
-  font-size: 9rem;
+  font-size: 8rem;
   text-align: center;
   color: var(--light-text);
 }
@@ -304,10 +304,12 @@ section img {
   padding: 15px;
   display: flex;
   justify-content: space-between;
+  
 }
 
 #skill-section .skill-container ul li progress {
   accent-color: #ea0000;
+  
 }
 
 
@@ -364,6 +366,43 @@ section img {
 
 
 
+/* My Work Section */
+
+#grin-section {
+  text-align: center;
+  padding: 50px;
+  background-color: #5A639C; /* Light gray background */
+}
+
+#grin-section h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: var(--light-text);
+}
+
+#grin-section img {
+  max-width: 30%; /* Ensure images don't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  padding: 30px;
+  margin: 30px; /* Add spacing between images */
+  border: 10px solid #ffffff; /* Add a border for clarity */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  background-color: #7776B3;
+}
+
+
+
+#entities-section {
+  text-align: center;
+  background-color: #000000;
+}
+
+#entities-section h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: var(--light-text);
+
+}
 
 
 

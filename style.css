@@ -135,22 +135,6 @@ nav svg {
   color: var(--dark-blue);
 }
 
-.hero-contents a.btn {
-  display: inline-block;
-  background-color: var(--dark-blue);
-  color: var(--light-text);
-  text-decoration: none;
-  font-size: 2.5rem;
-  border-radius: 10px;
-  margin: 20px 0px;
-  font-weight: bold;
-  
-}
-
-.hero-contents .btn:hover {
-  background-color: var(--primary-purple);
-}
-
 section img {
   max-width: 100%;
   height: auto;
@@ -273,6 +257,120 @@ section img {
 }
 
 
+#skill-section {
+  padding: 80px 20px 150px 20px;
+  background-color: var(--deep-green);
+}
+
+#skill-section h2 {
+  font-size: 9rem;
+  text-align: center;
+  color: var(--light-text);
+}
+
+#skill-section .wrapper {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+#skill-section .skill-container {
+  width: 500px;
+  max-width: 100%;
+  border: 10px solid var(--dark-blue);
+  border-top: none;
+}
+
+#skill-section .skill-container h3 {
+  background-color: var(--dark-blue);
+  padding: 15px 0;
+  text-align: center;
+  text-transform: uppercase; 
+  font-size: 5rem;
+  color: var(--light-text)
+}
+
+#skill-section .skill-container ul {
+  margin: 10px 0;
+  list-style: none;
+  font-size: 2rem;
+  color: #fff;
+  
+}
+
+#skill-section .skill-container ul li {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#skill-section .skill-container ul li progress {
+  accent-color: #ea0000;
+}
+
+
+
+
+.socials-container{
+  display: flex;
+  gap: 20px;
+  align-items: center; /* Center the items vertically */
+}
+.socials-container a{
+  background-color: var(--dark-blue);
+  padding: 1em;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+.socials-container a svg{
+  height: 32px;
+  fill: #fff;
+}
+
+
+.socials-container a:hover{
+  background-color: var(--accent-color);
+  fill: white;
+}
+
+
+.socials-container a.btn {
+  background-color: var(--dark-blue);
+  color: var(--light-text);
+  text-decoration: none;
+  font-size: 2.5rem;
+  border-radius: 10px;
+  margin: 20px 0px;
+  font-weight: bold;
+  height: 64px;
+  width: 200px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.socials-container .btn:hover {
+  background-color: var(--primary-purple);
+}
+
+
+
+
+
+
+
+
+
+
 /* This is for mobile phone ratios */
 @media (max-width: 800px) {
   .links-container {
@@ -326,10 +424,6 @@ section img {
   }
 
 
-
-  
-
-
   .about-section {
     background-color: var(--deep-green);
     color: var(--light-text);
@@ -363,4 +457,5 @@ section img {
   }
   
 
-}
+
+

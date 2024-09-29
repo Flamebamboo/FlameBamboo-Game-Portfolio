@@ -28,13 +28,14 @@ html {
 
 nav {
   font-size: 2rem;
-  height: 60px;
+  height: 70px;
   background-color: var(--light-text);
   display: flex;
   justify-content: flex-end;
   align-items: center;
   top: 0;
   position: sticky;
+  z-index: 100;
 }
 
 .links-container {
@@ -42,8 +43,9 @@ nav {
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: center; /* y axis center */
 }
+
 
 nav a {
   height: 100%;
@@ -53,10 +55,12 @@ nav a {
   display: flex;
   align-items: center;
   text-decoration: none;
+  transition: 150ms ease;
 }
 
 nav a:hover {
   color: var(--primary-purple);
+  scale: 1.1;
 }
 
 nav a.active {
@@ -250,12 +254,19 @@ section img {
   border-radius: 8px;
   transition: background-color 0.3s ease;
   font-weight: bold;
+  transition: 150ms ease;
 }
 
 .btn:hover {
   background-color: var(--primary-purple);
+  scale: 1.1;
 }
 
+
+
+
+
+/* Skill Sections*/
 
 #skill-section {
   padding: 80px 20px 150px 20px;
@@ -314,6 +325,9 @@ section img {
 
 
 
+/* hero image social media link buttons */
+
+
 
 .socials-container{
   display: flex;
@@ -331,6 +345,7 @@ section img {
   display: grid;
   place-items: center;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  transition: 150ms ease-in;
 }
 .socials-container a svg{
   height: 32px;
@@ -341,6 +356,8 @@ section img {
 .socials-container a:hover{
   background-color: var(--accent-color);
   fill: white;
+  scale: 1.2;
+  
 }
 
 
@@ -357,12 +374,17 @@ section img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 100ms;
   
 }
 
 .socials-container .btn:hover {
   background-color: var(--primary-purple);
+  scale: 1.1;
 }
+
+
+
 
 
 
@@ -388,6 +410,11 @@ section img {
   border: 10px solid #ffffff; /* Add a border for clarity */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
   background-color: #7776B3;
+  transition: border-color 0.3s ease-in-out;
+}
+
+#grin-section img:hover {
+  border-color: #000;
 }
 
 
@@ -395,14 +422,131 @@ section img {
 #entities-section {
   text-align: center;
   background-color: #000000;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: center; /* Y Axis */
+  justify-content: center; /* X Axis */
+}
+
+.entities-wrapper{
+  display: grid;
+  grid-row: 2;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+
+
 }
 
 #entities-section h1 {
   font-size: 4rem;
-  margin-bottom: 20px;
+  padding: 80px;
   color: var(--light-text);
+  grid-row: 1;
+  text-align: center;
 
 }
+
+
+
+#bossbat img {
+  animation-name: bossbat-fly;
+  animation-duration: 2s; 
+  animation-delay: 1s; /* delay before staring it again*/
+  animation-iteration-count: infinite; /* unlimited repeat */
+  animation-timing-function: ease-in-out; /* using bezier curve for animation curve */
+  animation-direction: alternate;
+  /* animation-fill-mode: forwards; if i want the animations to stop at the last frame */
+
+
+}
+
+
+#minibat img {
+  animation-name: bossbat-fly;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; /* unlimited repeat */
+  animation-timing-function: ease-in-out; 
+  animation-direction: alternate;
+}
+
+
+
+@keyframes bossbat-fly {
+  
+  0%{
+
+  }
+  50% {
+    transform: translateY(15px);
+  }
+
+  100% {
+    transform: translateY(-150px);
+  }
+}
+
+/* using grid */
+#hud-gui-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  padding: 50px;
+  background-color: #1A1A2E; 
+}
+
+/* pause menu and tutorial image  */
+#gui-section, #hud-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* GUI section and HUD section title */
+
+#gui-section h1, #hud-section h1 {
+  font-size: 4rem;
+  color: var(--light-text); 
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px var(--primary-purple); 
+}
+
+
+.gui-images, .hud-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 60px;
+  width: 85%;
+}
+
+/* Image Styles with Glows */
+.gui-image, .hud-image {
+  
+  width: 100%;
+  height: auto;
+  border-radius: 100px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gui-image:hover, .hud-image:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 1); 
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -424,6 +568,12 @@ section img {
     box-shadow: -0.1pc 0 0.1px black;
     transition: 1s ease-out;
   }
+
+  /* The HUD */
+  #hud-gui-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
 
 
   html {
@@ -494,7 +644,25 @@ section img {
   .btn {
     margin-left: 50px;
   }
-  
+
+
+
+  .socials-container a {
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+  }
+
+  .socials-container a svg {
+    height: 24px;
+  }
+
+  .socials-container a.btn {
+    height: 50px;
+    width: 150px;
+    font-size: 2rem;
+  }
+}
 
 
 

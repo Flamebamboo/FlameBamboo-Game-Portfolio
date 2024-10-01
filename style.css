@@ -15,6 +15,46 @@
   --black-: #3C3D37;
 }
 
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -161,6 +201,8 @@ section img {
   margin-bottom: 20px;
 }
 
+
+
 .content-wrapper {
   display: flex;
   justify-content: center;
@@ -169,6 +211,29 @@ section img {
   text-align: center;
   padding: 20px;
 }
+
+.losthowls-btn {
+  display: inline-block;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: var(--deep-green);
+  color: var(--light-text);
+  font-size: 2rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  transition: 150ms ease;
+}
+
+
+.losthowls-btn:hover {
+  background-color: var(--teal-accent);
+  scale: 1.1;
+}
+
+
+
 
 .losthowl-banner img {
   max-width: 80%;
@@ -188,7 +253,7 @@ section img {
 .bottom-text {
   font-size: 1.7rem;
   color: var(--light-text);
-  padding-bottom: 80px;
+  padding-bottom: 30px;
   margin: 20px;
   width: 100%;
   max-width: 900px;
@@ -270,11 +335,11 @@ section img {
 
 #skill-section {
   padding: 80px 20px 150px 20px;
-  background-color: var(--deep-green);
+  background-color: #EB3678;
 }
 
 #skill-section h2 {
-  font-size: 8rem;
+  font-size: 6rem; 
   text-align: center;
   color: var(--light-text);
 }
@@ -288,41 +353,86 @@ section img {
 }
 
 #skill-section .skill-container {
-  width: 500px;
+  width: 400px; 
   max-width: 100%;
-  border: 10px solid var(--dark-blue);
+  border: 8px solid #4F1787;
   border-top: none;
+  border-radius: 10px; 
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.5);
+  transition: transform 200ms ease, box-shadow 200ms ease; /* Smooth transition for both scale and shadow */
+  
 }
+  
+  .skill-container:hover {
+    transform: scale(1.05); /* Smooth scaling */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+  }
 
 #skill-section .skill-container h3 {
-  background-color: var(--dark-blue);
-  padding: 15px 0;
-  text-align: center;
-  text-transform: uppercase; 
-  font-size: 5rem;
-  color: var(--light-text)
+  background-color: #4F1787;
+  padding: 20px 0;
+  text-align: center
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  color: var(--light-text);
 }
 
 #skill-section .skill-container ul {
   margin: 10px 0;
-  list-style: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #fff;
-  
 }
 
 #skill-section .skill-container ul li {
-  padding: 15px;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
-  
+  align-items: center;
 }
+
 
 #skill-section .skill-container ul li progress {
-  accent-color: #ea0000;
-  
+  width: 60%;
+  height: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  appearance: none; /* CHATGPT:  Removes default browser styling */
 }
 
+/* chat gpt generated  due to issues I cant do*/
+#skill-section .skill-container ul li progress::-webkit-progress-value {
+  background-color: #180161; /* Progress bar color */
+  border-radius: 5px;
+}
+
+#skill-section .skill-container ul li progress::-webkit-progress-bar {
+  background-color: var(--light-text); /* Background of the progress bar */
+  border-radius: 5px;
+}
+
+
+#skills-info {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--light-text);
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px; 
+  background-color: #4F1787;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+}
+
+#skills-text {
+  max-width: 80%;
+  line-height: 1.5;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  color: var(--light-text);
+}
 
 
 /* hero image social media link buttons */
@@ -550,6 +660,34 @@ section img {
 
 
 
+/* practice js */
+
+
+#btn-container {
+  display:grid;
+  
+
+
+}
+#count {
+  display: block;
+  text-align: center;
+  font-size: 10em;
+
+   
+
+}
+
+.button {
+  padding: 50px 20px;
+  font-size: 1.8em;
+  color: white;
+  background-color: black ;
+}
+
+
+
+
 
 
 
@@ -670,6 +808,29 @@ section img {
     width: 150px;
     font-size: 2rem;
   }
+
+
+  #skill-section h2 {
+    font-size: 4.5rem; /* Scale down the main heading */
+  }
+
+  #skill-section .skill-container h3 {
+    font-size: 3rem; /* Scale down subheadings */
+  }
+
+  #skill-section .skill-container {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  #skill-section .wrapper {
+    flex-direction: column;
+    gap: 20px; /* Adjust gap for vertical stacking */
+  }
+}
+
+
+
+
 }
 
 

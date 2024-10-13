@@ -105,6 +105,10 @@ nav a:hover {
 
 nav a.active {
   color: var(--accent-teal);
+}
+
+
+#home{
   margin-right: auto;
 }
 
@@ -303,6 +307,8 @@ section img {
   padding-right: 30px;
 }
 
+
+
 .highlight-text {
   color: var(--dark-blue);
   font-weight: bold;
@@ -328,6 +334,58 @@ section img {
 }
 
 
+#about-container {
+  position: relative;
+  height: 80vh; 
+  width: 100%; 
+  overflow: hidden;
+}
+
+#about-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+
+
+}
+
+#about-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 0;
+}
+
+#about-container h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--light-text);
+  font-size: 6rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+#about-container h1::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: var(--light-text);
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+
 
 
 
@@ -342,6 +400,7 @@ section img {
   font-size: 6rem; 
   text-align: center;
   color: var(--light-text);
+  
 }
 
 #skill-section .wrapper {
@@ -371,7 +430,7 @@ section img {
 #skill-section .skill-container h3 {
   background-color: #4F1787;
   padding: 20px 0;
-  text-align: center
+  text-align: center;
   text-transform: uppercase;
   font-size: 3.5rem;
   color: var(--light-text);
@@ -413,13 +472,13 @@ section img {
 
 #skills-info {
   font-size: 2rem;
-  text-align: center;
+  text-align: left;
   color: var(--light-text);
-  min-height: 80vh;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 50px; 
+  padding: 100px 50px; 
   background-color: #4F1787;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
 }
@@ -427,12 +486,36 @@ section img {
 #skills-text {
   max-width: 80%;
   line-height: 1.5;
-  padding: 20px;
+  padding: 100px 100px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
   color: var(--light-text);
+
 }
+
+#skills-text span {
+  font-weight: bold; 
+  font-size:3.5rem;  
+}
+
+
+#content-creation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(white );
+  flex-direction: column;
+  text-align: center;
+}
+
+#content-creation h1{
+  font-size: 6rem;
+  margin-top: 100px;
+
+}
+
 
 
 /* hero image social media link buttons */
@@ -527,6 +610,41 @@ section img {
   border-color: #000;
 }
 
+
+
+#WIP-section {
+  text-align: center;
+  background-color: #387478;
+  height: 120vh;
+
+}
+
+#WIP-section img:hover {
+  border-color: #000;
+}
+
+#WIP-section h1{
+  font-size: 9rem;
+  padding-top: 80px;
+  color: var(--light-text);
+  text-align: center;
+
+}
+
+#WIP-section p {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--light-text);
+  text-align: center;
+}
+#WIP-section img {
+  max-width: 50%;
+  height: auto; 
+  margin: 30px; 
+  border: 10px solid #ffffff; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  transition: border-color 0.3s ease-in-out;
+}
 
 
 #entities-section {

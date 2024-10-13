@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3B53Y4SM88"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3B53Y4SM88');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href = "style.css">
+    <link rel="icon" type="image/x-icon" href="Images/pawFavicon.png">
     <title>FlameBamboo</title>
 </head>
 <body>
@@ -31,8 +41,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
             </label>
             <!-- <img src="Images/PawLogo.png" class="logo" alt="logo"> -->
-            <a href="index.html" class="active"> Home</a>
-            <a href="#about" > About Me </a>
+            <a href="index.html" class="active" id="home"> Home</a>
+            <a href="aboutme.html" > About Me </a>
             <a href="artportfolio.html" > Art Portfolio </a>
             <a href="losthowls.html" > LostHowls </a>
         </div>   
@@ -55,7 +65,7 @@
                 <br>
 
                 <div class="socials-container">
-                    <a href="#about" class="btn">About Me</a>
+                    <a href="aboutme.html" class="btn">About Me</a>
                     <a href="https://discord.gg/U7GuYQ6tz3" style="--accent-color: rgb(17, 69, 223);">
                         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Discord</title><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
                     </a>
@@ -74,8 +84,7 @@
                             
                             
                   </div>
-                  
-                <!-- <a href="#about" class="btn">About Me</a> -->
+                
             </div>
         </div>
 
@@ -114,63 +123,12 @@
                 My recent project solo developed, <span class="highlight-text">Lost Howls</span>, is a handcrafted pixel art platformer, 
                 blending puzzles, exploration, and atmospheric storytelling.
             </p>
-            <a href="#" class="btn">Check out my work</a>
+            <a href="aboutme.html" class="btn">More about me</a>
         </div>
     </section>
 
 
-    <section id="skill-section">
-        <h2>My Skillset</h2>
-        <div class="wrapper">
-            <div class="skill-container">
-                <h3>Design & Media</h3>
-                <ul>
-                    <li>Aseprite<progress max="100" value="30"></progress></li>
-                    <li>Adobe <br> Photoshop<progress max="100" value="10"></progress></li>
-                    <li>WordPress<progress max="100" value="90"></progress></li>
-                    <li>Video Editing<progress max="100" value="20"></progress></li>
-                    <li>Adobe <br>Illustrator<progress max="100" value="20"></progress></li>
-                </ul>
-            </div>
-            <div class="skill-container">
-                <h3>Front-End Development</h3>
-                <ul>
-                    <li>HTML<progress max="100" value="90"></progress></li>
-                    <li>CSS<progress max="100" value="30"></progress></li>
-                    <li>JavaScript <progress max="100" value="20"></progress></li>
-                    <li>React.js <progress max="100" value="1"></progress></li>
-                </ul>
-            </div>
-            <div class="skill-container">
-                <h3>Back-End Development</h3>
-                <ul>
-                    <li>Python <progress max="100" value="20"></progress></li>
-                    <li>GDScript <progress max="100" value="20"></progress></li>
-                    <li>Node.js<progress max="100" value="0"></progress></li>
-                    <li>Express.js<progress max="100" value="0"></progress></li>
-                    <li>C#<progress max="100" value="4"></progress></li>
-                </ul>
-            </div>
-            <div class="skill-container">
-                <h3>Game Engines</h3>
-                <ul>
-                    <li>Godot <progress max="100" value="15"></progress></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    
-    <section id="skills-info">
-       <p id="skills-text">
-      
-I enjoy working with various tools and programming languages. I was introduced to computers at a very young age and fondly remember my childhood days when I was about 6-7 years old. I was in love with animations, and Big Hero 6 was my favourite cartoon, which I would watch a thousand times! I started off by creating flip books of Baymax, and as my curiosity grew about how animation works, I hopped onto my mom's computer, got into Microsoft PowerPoint, and fell in love with making frame by frame animations. Since then, I think that's where my main passion for computers started, as my mom also comes from an IT background. In game development, creating good art is crucial. I use software like Aseprite and Adobe Photoshop to make pixel art. I have about 4 months of experience with Aseprite and Pixel Art in general, and I've been using Photoshop since 2020 for creating YouTube thumbnails.
-
-<br><br><br>I used to be a gaming addict, spending 10–13 hours a day on games while also making gaming content. Although about 3 years ago I stopped gaming, I realised it doesn't give me purpose to pursue. I still play games, obviously, but I lost a lot of interest in going back on my Xbox or Nintendo Switch, so I ended up selling all my gaming consoles. I stopped that to focus on my golfing career and played competitively. Recently, I shifted my focus back to game development using game engines. I've worked with Scratch and Gamefroot in the past, and in the last 5 months, I created two games using Godot. The first was a learning project called "Cat Golf Platformer," and the second, "Lost Howls," was made for a national school game jam.
- 
-<br><br><br>For web development, I started of from the ground up, I learnt WordPress when I was 10 years old, it was a good platform to get familiar with UI/UX design from wireframing a well structuted website to a finished product. Recently I focused on both front-end and back-end skills, using HTML, CSS, and JavaScript. I'm always learning new things to improve my work. Currently, I’m studying full-stack development with the MERN stack (React, MongoDB, Express, Node) because I plan to build a commercial project before I graduate from high school!
-
-        </p>
-    </section>
+   
     
     
 

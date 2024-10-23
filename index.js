@@ -27,6 +27,13 @@ window.onclick = function(event) {
     }
 };
 
+
+
+
+
+// console.log(mainElement.childNodes.length);
+
+
 // document.write('The sum is: ' + sum)
 
 
